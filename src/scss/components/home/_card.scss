@@ -1,0 +1,108 @@
+.card {
+    border-radius: 3px;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, .5);
+    
+    display: grid;
+    grid-row: 1fr 10rem;
+    grid-column: 1fr;
+
+    &:hover &__image{
+        transform: scale(1.05);
+    }
+
+    &:hover &__bottom {
+        transform: translateY(0);
+    }
+
+    &__image {
+        width: 100%; 
+        // height: 46rem;
+        display: block;
+        object-fit: cover;
+        transition: all 1s;
+    }
+
+    &__top {
+        height: 46rem;
+        overflow: hidden;
+        position: relative;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
+
+    &__bottom {
+        background-color: rgba($color-grey-1, .85);
+        color: white;
+        height: 15rem;
+        width: 100%;
+        z-index: 10;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        align-self: end;
+        transform: translateY(16rem);
+        transition: all .4s;
+        font-size: $text-1;
+        font-weight: 600;
+
+        display: grid;
+        grid-template-rows: 1fr 5rem;
+        grid-template-columns: 1fr;
+
+        &--btn {
+            grid-row: 2 / 2;
+            grid-column: 1 / -1;
+            align-self: center;
+            justify-self: center;
+        }
+
+        &--description {
+            font-size: $text-1;
+            padding: 2rem 1rem;
+        }
+    }
+
+    &__tools {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+
+        &--item{
+            display: flex;
+            align-items: center;
+        }
+
+        &--icon {
+            padding-right: 1rem;
+            height: 3rem;
+            width: 3rem;
+        }
+
+        &--1 {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+        }
+
+        &--2 {
+            grid-row: 1 / 1;
+            grid-column: 2 / 2;
+        }
+
+        &--3 {
+            grid-row: 2 / 2;
+            grid-column: 1 / 1;
+        }
+
+        &--4 {
+            grid-row: 2 / 2;
+            grid-column: 2 / 2;
+        }
+    }
+}

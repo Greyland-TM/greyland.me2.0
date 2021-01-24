@@ -1,0 +1,30 @@
+.contact {
+    // background-color: rgba($color-grey-1, .5); // FOR LIGHT MODE
+    background-color: rgba($color-black-0, .8); // FOR DARK MODE
+
+    // background-image: linear-gradient(to right, rgba($color-white-2, .5) 50% , rgba($color-white, .5) 50%);
+    grid-column: 1 / -1;
+    grid-row: 6 / 7;
+    border-bottom: 1px solid rgb(36, 36, 36);
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+
+    margin: 4rem 16rem;
+
+    &__how {
+        grid-column: 1 / 4;
+        font-size: $header-3;
+        font-family: $font-main;
+        color: $color-white-2;
+    }
+
+    &__info {
+        grid-column: 4 / -1;
+        font-size: $header-3;
+        font-family: $font-main;
+        color: $color-white-2;
+    }
+}
