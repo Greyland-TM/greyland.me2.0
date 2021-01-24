@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    z-index: 30;
     position: fixed;
 
     &__list {
@@ -18,31 +17,52 @@
     }
 
     &__link {
-      text-decoration: none;
-      color: $color-white-2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
 
+      height: 100%;
+      width: 8rem;
+      padding-bottom: 2px;
+      margin: 0 3.5rem;
+      
+      font-family: 'Merriweather', serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $color-white-2; 
     }
+    
 
     &__item {
-        padding: 0 2.3rem;
         height: 100%;
-        align-self: stretch;
-        transition: all .2s;
+        transition: all .2s ease-out;
         border-bottom: 2px solid rgba($color-2, 0);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        font-family: 'Merriweather', serif;
-        text-transform: uppercase;
+    }
 
-        &:hover,
-        &:active {
-            cursor: pointer;
-            background-color: rgba($color-3-light, .5);  
-            border-bottom: 2px solid $color-5-light;  
-        }
+    &__link::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background-color: $color-5;
+      transform: scaleX(0);
+      transition: all .3s;
+    }
+
+    &__link:hover::after {
+      cursor: pointer;
+      transform: scaleX(1.5);
     }
 }
+
+.active::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: $color-5;
+    transform: scaleX(1.2);
+}
+
 
 .toggle-container {
    display: flex;
@@ -117,4 +137,5 @@
       }
   }
   
+
   
