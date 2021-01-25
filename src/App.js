@@ -11,9 +11,11 @@ import Contact from './js/contact/contact';
 
 import Footer from './js/footer';
 
+import Aux from './js/HOC/aux';
+
 function App() {
   return (
-      <div className='container'>
+      <Aux>
         <Navbar></Navbar>
 
         <Switch>
@@ -25,7 +27,7 @@ function App() {
         </Switch>
         
         <Footer></Footer>
-      </div>
+      </Aux>
   );
 }
 

@@ -24,10 +24,12 @@
         &--item {
             padding: 0 3rem;
             padding-bottom: 1px;
+            text-decoration: none;
+            color: $color-white-2;
 
             &:hover {
                 color: $color-oppisite;
-                transform: scale(1.2);
+                transform: scale(2);
                 cursor: pointer;
                 padding-bottom: 0;
                 border-bottom: 1px solid $color-oppisite;

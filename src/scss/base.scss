@@ -29,7 +29,7 @@ body {
     //                        [content-end]minmax(min-content, 1fr)[page-end];
 }
 
-.container {
+.home-container {
     width: 100%;
     margin: 0 auto;
     
@@ -40,4 +40,7 @@ body {
     grid-template-columns: [page-start extra-start] minmax(min-content, 1fr) [sidebar-end content-start] 
                            repeat(6, [col-start] minmax(min-content, 1fr) [col-end]) 
                            [content-end]minmax(min-content, 1fr)[page-end];
+
+    // background-image: url('../media/pattern1.png');
+
 }

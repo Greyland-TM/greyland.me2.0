@@ -3,9 +3,11 @@ import Card from './card';
 import nexter from '../../media/nexter3.png';
 import trillo from '../../media/trillo.png';
 import notorus from '../../media/notorus.jpg';
+import pattern1 from '../../media/pattern1.png';
 
 const Projects = () => (
     <div className="projects">
+        
 
         {/* <div className="projects__head"> */}
             <h3 className="projects__head">Check out some of my favorite completed projects.</h3>
