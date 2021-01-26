@@ -35,7 +35,7 @@ body {
     
     display: grid;
     
-    grid-template-rows: 0px 90vh repeat(3, minmax(min-content, 20rem)) 300px 200px;
+    grid-template-rows: 0px 90vh repeat(3, minmax(min-content, 20rem)) max-content;
     
     grid-template-columns: [page-start extra-start] minmax(min-content, 1fr) [sidebar-end content-start] 
                            repeat(6, [col-start] minmax(min-content, 1fr) [col-end]) 

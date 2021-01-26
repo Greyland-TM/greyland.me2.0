@@ -44,8 +44,8 @@
         padding-left: 10rem;
         background-repeat: no-repeat;
         background-size: 1px 80%;
+        font-size: $text-1;
 
-        // background-image: linear-gradient(rgba($color-1, .7), rgba($color-1, .7)); // FOR LIGHT MODE
         background-image: linear-gradient(rgba($color-white-2, .7), rgba($color-white-2, .7)); // FOR DARK MODE
 
         &--1 {

@@ -5,11 +5,11 @@ const Footer = () => (
     <div className="footer">
         <div className="footer__pageselect">
             <ul className='footer__pageselect--list'>
-                <li><Link className="footer__pageselect--item" path='/' exact>Home</Link></li>
-                <li><Link className="footer__pageselect--item" path='/skills' exact>Skills</Link></li>
-                <li><Link className="footer__pageselect--item" path='/about-me' exact>About me</Link></li>
-                <li><Link className="footer__pageselect--item" path='/projects' exact>Projects</Link></li>
-                <li><Link className="footer__pageselect--item" path='/contact' exact>Contact</Link></li>
+                <li><Link className="footer__pageselect--item" to='/'>Home</Link></li>
+                <li><Link className="footer__pageselect--item" to='/skills'>Skills</Link></li>
+                <li><Link className="footer__pageselect--item" to='/about-me'>About me</Link></li>
+                <li><Link className="footer__pageselect--item" to='/projects'>Projects</Link></li>
+                <li><Link className="footer__pageselect--item" to='/contact'>Contact</Link></li>
             </ul>
         </div>
         <div className="footer__copyright">

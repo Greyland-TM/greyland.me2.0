@@ -5,7 +5,7 @@ import { IoMdGrid } from "react-icons/io";
 
 const Card = (props) => (
 
-    <div className="card">
+    <div className="card" >
         <div className="card__top">
             <figure className="card__image">
                 <img src={props.src} alt="Project Cover" className='card__image'/>

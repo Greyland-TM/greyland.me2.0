@@ -4,7 +4,7 @@ import { Route, Switch} from 'react-router-dom';
 import Navbar from './js/navbar';
 
 import Home from './js/home/Home';
-import Skills from './js/skills/skills';
+import Skills from './js/skills-page/skills-page';
 import AboutMe from './js/aboutMe/aboutMe';
 import Projects from './js/projects/projects';
 import Contact from './js/contact/contact';
@@ -20,7 +20,7 @@ function App() {
 
         <Switch>
           <Route path='/' exact component={Home}></Route>
-          <Route path='/projects' exact component={Skills}></Route>
+          <Route path='/skills' exact component={Skills}></Route>
           <Route path='/about-me' exact component={AboutMe}></Route>
           <Route path='/projects' exact component={Projects}></Route>
           <Route path='/contact' exact component={Contact}></Route>
