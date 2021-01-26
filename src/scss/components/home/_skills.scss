@@ -22,7 +22,7 @@
         &:hover {
             box-shadow: 0 .5rem 1rem rgba(black, .15);
             transform: scale(1.05);
-            background-color: rgba($color-black-1, 1); // FOR DARK MODE
+            background-color: rgba($color-black-3, 1); // FOR DARK MODE
         }
 
         &:hover > * {
@@ -55,7 +55,7 @@
     &__icon {
         height: 3rem;
         width: 3rem;
-        color: $color-4-light;
+        color: $color-oppisite;
         // color: $color-3;
     }
 

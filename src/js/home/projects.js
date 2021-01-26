@@ -18,7 +18,7 @@ class Projects extends Component {
 
     componentDidMount = () => {
         const projectLeft = {
-            reset: true,
+            // reset: true,
             origin: 'left',
             duration: 1500,
             delay: 500,
@@ -28,7 +28,7 @@ class Projects extends Component {
         }
 
         const projectRight = {
-            reset: true,
+            // reset: true,
             origin: 'bottom',
             duration: 1500,
             delay: 500,
@@ -38,7 +38,7 @@ class Projects extends Component {
         }
 
         const projectMiddle = {
-            reset: true,
+            // reset: true,
             origin: 'right',
             duration: 1500,
             delay: 500,
