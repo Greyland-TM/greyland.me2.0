@@ -7,51 +7,59 @@ import sr from '../HOC/scroll-reveal/scrollReveal';
 // import pattern1 from '../../media/pattern1.png';
 
 class Projects extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {scrollPosition: 'top'}
+        this.cardLeft = React.createRef();
+        this.cardMiddle = React.createRef();
+        this.cardRight = React.createRef();
+    }
 
     componentDidMount = () => {
         const projectLeft = {
-            origin: 'bottom',
+            reset: true,
+            origin: 'left',
             duration: 1500,
-            delay: 5000,
+            delay: 500,
             distance: '500px',
             scale: 1,
             easing: 'ease',
         }
 
         const projectRight = {
+            reset: true,
             origin: 'bottom',
             duration: 1500,
-            delay: 5000,
+            delay: 500,
             distance: '500px',
             scale: 1,
             easing: 'ease',
         }
 
         const projectMiddle = {
-            origin: 'bottom',
+            reset: true,
+            origin: 'right',
             duration: 1500,
-            delay: 5000,
+            delay: 500,
             distance: '500px',
             scale: 1,
             easing: 'ease',
         }
 
-        sr.reveal(this.refs.cardRight, projectRight);
-        sr.reveal(this.refs.cardLeft, projectLeft);
-        sr.reveal(this.refs.cardMiddle, projectMiddle);
+        sr.reveal(this.cardRight.current, projectRight);
+        sr.reveal(this.cardLeft.current, projectLeft);
+        sr.reveal(this.cardMiddle.current, projectMiddle);
     }
 
-    
-
     render() {
-        const ref = React.createRef();
         return (
             <div className="projects">
                 
                 <h3 className="projects__head">Check out some of my favorite completed projects.</h3>
 
                 <Card
-                    ref={ref}
+                    ref={this.cardLeft}
                     link='https://nexter-three.vercel.app/'
                     src={nexter}
                     description='This pjoject was to solidify designing with the CSS grids.'
@@ -63,7 +71,7 @@ class Projects extends Component {
                 ></Card>
 
                 <Card
-                    ref='cardMiddle'
+                    ref={this.cardRight}
                     link='https://trillo-beta.vercel.app/'
                     src={trillo}
                     description='With this web page I built on my skills learning design using flex box.'
@@ -74,7 +82,7 @@ class Projects extends Component {
                 ></Card>
 
                 <Card
-                    ref='cardRight'
+                    ref={this.cardMiddle}
                     link='https://notorus.vercel.app/'
                     src={notorus}
                     description='This project was mainly to practce animations for front end design.'

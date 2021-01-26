@@ -4,11 +4,21 @@ import React, {Component} from 'react';
 import sr from '../HOC/scroll-reveal/scrollReveal';
 
 class Description extends Component {
-  // props: Props;
+  constructor(props) {
+    super(props);
+    this.state = {scrollPosition: 'top'}
+
+    this.img1 = React.createRef();
+    this.img2 = React.createRef();
+    this.txt1 = React.createRef();
+    this.txt2 = React.createRef();
+  }
 
   componentDidMount = () => {
+
     const configTxt = {
-      origin: 'bottom',
+      reset: true,
+      origin: this.state.scrollPosition,
       duration: 1500,
       delay: 500,
       distance: '500px',
@@ -17,7 +27,8 @@ class Description extends Component {
     }
 
     const configImg = {
-      origin: 'bottom',
+      reset: true,
+      origin: this.state.scrollPosition,
       duration: 1500,
       delay: 300,
       distance: '500px',
@@ -25,19 +36,30 @@ class Description extends Component {
       easing: 'ease',
     }
 
-    sr.reveal(this.refs.txt1, configTxt)
-    sr.reveal(this.refs.txt2, configTxt)
-    sr.reveal(this.refs.img1, configImg)
-    sr.reveal(this.refs.img2, configImg)
+    console.log(this.state.scrollPosition)
+
+    sr.reveal(this.txt1.current, configTxt)
+    sr.reveal(this.txt2.current, configTxt)
+    sr.reveal(this.img1.current, configImg)
+    sr.reveal(this.img2.current, configImg)
+
+    if (this.state.scrollPosition === 'bottom') {
+      this.setState = {scrollPosition: 'top'}
+    } else {
+      this.setState = {scrollPosition: 'bottom'}
+    }
+
+    console.log(this.state.scrollPosition)
+    console.log(this.txt1.current)
   }
 
   render () {
     return (
           <div className="description" >
           
-          <img src={glassBeach} alt="together" className="description__image description__image--1" ref='img1'/>
+          <img src={glassBeach} alt="together" className="description__image description__image--1" ref={this.img1}/>
           {/* <img src={oceanHole} alt="together" className="description__image description__image--12"/> */}
-          <div className="description__content description__content--1" ref='txt1'>
+          <div className="description__content description__content--1" ref={this.txt1}>
               <div className="">
                   <h2 className="description__content--head">What about Greyland?</h2>
                   <p className="description__content--text">
@@ -57,8 +79,8 @@ class Description extends Component {
               </div>
           </div>
 
-          <img src={tablet} alt="together" className="description__image description__image--2" ref='img2'/>
-          <div className="description__content description__content--2" ref='txt2'>
+          <img src={tablet} alt="together" className="description__image description__image--2" ref={this.img2}/>
+          <div className="description__content description__content--2" ref={this.txt2}>
               <div className="">
                   <h2 className="description__content--head">Why should you pick me?</h2>
                   <p className="description__content--text">

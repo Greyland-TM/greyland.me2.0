@@ -3,9 +3,8 @@ import { DiJavascript } from "react-icons/di";
 import { IoLogoReact, IoLogoSass } from "react-icons/io5";
 import { IoMdGrid } from "react-icons/io";
 
-const Card = (props) => (
-
-    <div className="card" >
+const Card = React.forwardRef((props, ref) => (
+    <div className="card" ref={ref}>
         <div className="card__top">
             <figure className="card__image">
                 <img src={props.src} alt="Project Cover" className='card__image'/>
@@ -37,9 +36,7 @@ const Card = (props) => (
             <a href={props.link} target='blank' className="btn-2 card__bottom--btn">View this project &rarr;</a>
         </div>
     </div>
-);
-
-
+));
 
 export default Card;
 
