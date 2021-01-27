@@ -1,17 +1,15 @@
 .description {
-    // background-color: $color-white-2; // FOR LIGHT MODE
-    background-color: $color-black-1; // FOR DARK MODE
-    // color: $color-white-3;
+    background-color: $color-black-1; 
     color: $font-color-1;
-
     grid-column: 1 / -1;
     grid-row: 4 / 5; 
     display: grid;
     grid-template-columns: repeat(9, minmax(10rem, 1fr));
     grid-template-rows: repeat(3, max-content);
 
+    // MAIN STYLING FOR BOTH TEXT AND IMAGES
     &__content {
-        padding-top: 20rem;
+        padding: 15rem 0 15rem 0;
         display: grid;
         grid-template-columns: repeat(9, minmax(10rem, 1fr));
         grid-template-rows: repeat(4, minmax(5rem, 13rem));
@@ -28,75 +26,88 @@
         &--2 {
             grid-column: 1 / -1;
             grid-row: 3;
-            // padding-bottom: 15rem;
         }
 
-        &__background {
-            height: 150%;
-            grid-row: 1 / -1;
-            grid-column: 1 / 5;
-            background-color: black;
+        // THIS CLASS IS JUST FOR THE BACKGROUND BEHIND THE IMAGES
+        &--background {
+            height: 100%;
+            width: 105%;
+            background-color: rgba($color-black-2, .3);
+            z-index: -100;
+
+            &-1 {
+                grid-row: 1 / -1;
+                grid-column: 1 / 5;
+                transform: translate(1.4rem, 5rem);
+            }
+
+            &-2 {
+                grid-column: 6 / -1;
+                grid-row: 1 / -1;
+                transform: translate(-5rem, 3rem) scale(1.02, 1.1);
+            }
         }
     
+        // STYLING OF EACH IMAGE
         &--image {
-            // padding: 4rem;
             width: 100%; 
-            // height: 100%;
-            // display: block;
-            // object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 2rem 8rem rgba(black, .7);
             align-self: center;
 
             &--1 {
                 grid-column: 1 / 5;
                 grid-row: 1/ -1;
-                box-shadow: 0 3rem 5rem rgba(black, .7);
                 transform: scale(.9);
                 filter: blur(1px) opacity(.9) brightness(85%);
                 z-index: -50;
-                border-radius: 3px;
             }
 
             &--1-2 {
                 grid-column: 2 / 4;
                 grid-row: 2 / 4;
                 transform: scale(1.3) translate(2rem, 9rem);
-                // transform: scale(1.5) translate(2rem, 1.5rem);
-                box-shadow: 0 2rem 8rem rgba(black, .7);
-                border-radius: 3px;
-            }
-
-            &--1-3 {
-                grid-column: 2 / 4;
-                grid-row: 2 / 4;
-                transform: translate(9rem, 12rem);
-                // transform: scale(1.3);
-                box-shadow: 0 2rem 8rem rgba(black, .7);
-                z-index: 50;
             }
 
             &--2 {
                 grid-column: 6 / -1;
                 grid-row: 1/ -1;
                 transform: scale(.9);
+                filter: blur(1px) opacity(.9) brightness(85%);
             }
 
-            // &::before {
-            //     background-color: black;
-            //     height: 100%;
-            //     width: 100%;
-            // }
+            &--2-2 {
+                grid-column: 7 / span 2;
+                grid-row: 2/ span 2;
+                transform: scale(1.3) translate(-2rem, 10rem);
+                box-shadow: 0 2rem 8rem rgba(black, .7);
+                border-radius: 3px;
+            }
+        }
+
+        &--vertical {
+            grid-column: 4 / 5;
+            grid-row: 2 / span 3;
+            writing-mode: vertical-rl;
+            text-orientation: sideways-right;
+            font-size: $text-3;
+            transform: rotate(180deg) translateY(3rem);
+            align-self: center;
+            justify-self: end;
+
         }
     }
 
+    // STYLING AND PLACEMENT OF TEXT ELEMENTS
     &__text {
         font-size: $text-1;
         margin-top: 3rem;
         font-family: 'Merriweather', serif;
 
+        // FOR THE VERTICAL LINE BETWEEN TEXT AND IMAGES
+        background-image: linear-gradient(rgba($color-black-2, .7), rgba($color-black-2, .7)); 
         background-repeat: no-repeat;
-        background-size: 1px 80%;
-        background-image: linear-gradient(rgba($color-black-2, .7), rgba($color-black-2, .7)); // FOR DARK MODE
-        // background-image: linear-gradient(rgba($color-white-2, .7), rgba($color-white-2, .7)); // FOR DARK MODE
+        background-size: 2px 80%;
 
         span {
             color: $color-oppisite;
@@ -109,6 +120,8 @@
             padding-left: 10rem;
             grid-column: 5 / 9;
             grid-row: 1 / -1;
+
+            // POSITIONING VERTICAL LINE
             background-position: 0 50%;
         }
 
@@ -116,6 +129,8 @@
             padding: 0 10rem;
             grid-column: 1 / 6;
             grid-row: 1 / -1;
+
+            // POSITIONING VERTICAL LINE
             background-position: 100% 50%;
         }
 
@@ -127,19 +142,26 @@
         }
     }
 
-    &__paralax {
-        height: 30rem;
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        
-    
-        &--item {
-            background-image: linear-gradient(rgba($color-black-3, .5), rgba($color-black-3, .5)), url('../../../media/tech.jpg');
-            height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+    &__seperator {
+        grid-column: 5 / -1;
+        font-size: 2.4rem;
+        padding: 4rem;
+        // background-image: url('../../../media/pattern1.png');
+        // height: 100%;
+        // background-attachment: fixed;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // color: $color-oppisite;
+        // display: float;
+        // justify-content: flex-end;
+        // padding-left: auto;
+
+        &--body {
+        }
+
+        &--image {
+            width: 100%;
         }
     }
 }

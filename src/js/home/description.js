@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
 import sr from '../HOC/scroll-reveal/scrollReveal';
-// import glassBeach from '../../media/glassBeach.jpg';
+
 import tablet from '../../media/tablet.jpg';
 import work from '../../media/work.jpg';
-// import prettySunset from '../../media/prettySunset.jpg';
-import coffee from '../../media/coffee.jpg';
 import robot from '../../media/robot.jpg';
-import pattern from '../../media/pattern1.png';
 import workThings from '../../media/workThings.jpg';
 
 class Description extends Component {
@@ -36,7 +33,7 @@ class Description extends Component {
       // reset: true,
       origin: this.state.scrollPosition,
       duration: 1500,
-      delay: 1200,
+      delay: 500,
       distance: '500px',
       scale: 1,
       easing: 'ease',
@@ -83,11 +80,11 @@ class Description extends Component {
     return (
           <div className="description" >
             <div className="description__content description__content--1" ref={this.txt1}>
-                <div className="description__content--background"></div>
+                <div className="description__content--background description__content--background-1"></div>
                 <img src={work} alt="work" className="description__content--image description__content--image--1" ref={this.img1}/>
                 <img src={robot} alt="robot" className="description__content--image description__content--image--1-2" ref={this.img1}/>
-                {/* <img src={tablet} alt="together" className="description__content--image description__content--image--1-3" ref={this.img1}/> */}
-                <div className='description__text description__text--1'> {/* Make a grid container */}
+                <p className="description__content--vertical">stylish design makes a difference</p>
+                <div className='description__text description__text--1'> 
                     <h2 className="description__text--head">What about Greyland?</h2>
                     <p className="description__text--body">
                         I am a largly self taught software developer who is currently persuing a masters in computer science 
@@ -103,17 +100,18 @@ class Description extends Component {
                         You need a better way to manage the employees you already have? Greyland can <span>design &nbsp;</span>personalized 
                         spreadsheets that will exceed your wildest expectations.
                     </p>
-                    {/* <img src={pattern} alt="robot" className="description__content--image description__text--image"/> */}
                 </div>
           </div>
 
-          {/* <div className="description__paralax margin-top-m">
-            <div className="description__paralax--item"></div>
-          </div> */}
+          <div className="description__seperator">
+            <h1 className="description__seperator--body">Creative design that flows</h1>
+          </div>
 
           <div className="description__content description__content--2" ref={this.txt2}>
+                <div className="description__content--background description__content--background-2"></div>
                 <img src={workThings} alt="together" className="description__content--image description__content--image--2" ref={this.img2}/>
-                <div className='description__text description__text--2'> {/* Make a grid container */}
+                <img src={tablet} alt="together" className="description__content--image description__content--image--2-2" ref={this.img2}/>
+                <div className='description__text description__text--2'>
                     <h2 className="description__text--head">What about Greyland?</h2>
                     <p className="description__text--body">
                         If your want someone who will pay attention to the details, and produce an application that is &nbsp;
