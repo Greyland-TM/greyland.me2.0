@@ -1,5 +1,6 @@
 .projects {
-    background-image: linear-gradient(rgba(rgb(168, 143, 96), .2), rgba(rgb(80, 104, 136), .2)), url('../../../media/pattern1.png');
+    // background-image: linear-gradient(rgba(rgb(168, 143, 96), .2), rgba(rgb(80, 104, 136), .2)), url('../../../media/pattern1.png');
+    background-color: $color-black-1;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -18,10 +19,11 @@
     &__head {
         grid-column: 1 / -1;
         font-size: $header-1-2;
-        margin: 10rem;
+        margin: 0 0 10rem 0;
         border-bottom: 1px solid $color-oppisite;
         align-self: center;
         font-family: $font-main;
+        color: $font-color-1;
     }
 
     &__btn {

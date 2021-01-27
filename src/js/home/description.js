@@ -1,7 +1,13 @@
-import glassBeach from '../../media/stolen.png';
-import tablet from '../../media/tablet.jpg';
 import React, {Component} from 'react';
 import sr from '../HOC/scroll-reveal/scrollReveal';
+// import glassBeach from '../../media/glassBeach.jpg';
+import tablet from '../../media/tablet.jpg';
+import work from '../../media/work.jpg';
+// import prettySunset from '../../media/prettySunset.jpg';
+import coffee from '../../media/coffee.jpg';
+import robot from '../../media/robot.jpg';
+import pattern from '../../media/pattern1.png';
+import workThings from '../../media/workThings.jpg';
 
 class Description extends Component {
   constructor(props) {
@@ -20,7 +26,7 @@ class Description extends Component {
       // reset: true,
       origin: this.state.scrollPosition,
       duration: 1500,
-      delay: 500,
+      delay: 300,
       distance: '500px',
       scale: 1,
       easing: 'ease',
@@ -30,7 +36,7 @@ class Description extends Component {
       // reset: true,
       origin: this.state.scrollPosition,
       duration: 1500,
-      delay: 900,
+      delay: 1200,
       distance: '500px',
       scale: 1,
       easing: 'ease',
@@ -40,7 +46,7 @@ class Description extends Component {
       // reset: true,
       origin: this.state.scrollPosition,
       duration: 1500,
-      delay: 300,
+      delay: 500,
       distance: '500px',
       scale: 1,
       easing: 'ease',
@@ -50,7 +56,7 @@ class Description extends Component {
       // reset: true,
       origin: this.state.scrollPosition,
       duration: 1500,
-      delay: 700,
+      delay: 500,
       distance: '500px',
       scale: 1,
       easing: 'ease',
@@ -61,7 +67,7 @@ class Description extends Component {
     sr.reveal(this.txt1.current, configTxt);
     sr.reveal(this.txt2.current, configTxt2);
     sr.reveal(this.img1.current, configImg);
-    sr.reveal(this.img2.current, configImg);
+    sr.reveal(this.img2.current, configImg2);
 
     if (this.state.scrollPosition === 'bottom') {
       this.setState({scrollPosition: 'top'});
@@ -77,7 +83,10 @@ class Description extends Component {
     return (
           <div className="description" >
             <div className="description__content description__content--1" ref={this.txt1}>
-                <img src={glassBeach} alt="together" className="description__content--image description__content--image--1" ref={this.img1}/>
+                <div className="description__content--background"></div>
+                <img src={work} alt="work" className="description__content--image description__content--image--1" ref={this.img1}/>
+                <img src={robot} alt="robot" className="description__content--image description__content--image--1-2" ref={this.img1}/>
+                {/* <img src={tablet} alt="together" className="description__content--image description__content--image--1-3" ref={this.img1}/> */}
                 <div className='description__text description__text--1'> {/* Make a grid container */}
                     <h2 className="description__text--head">What about Greyland?</h2>
                     <p className="description__text--body">
@@ -94,15 +103,16 @@ class Description extends Component {
                         You need a better way to manage the employees you already have? Greyland can <span>design &nbsp;</span>personalized 
                         spreadsheets that will exceed your wildest expectations.
                     </p>
+                    {/* <img src={pattern} alt="robot" className="description__content--image description__text--image"/> */}
                 </div>
           </div>
 
-          <div className="description__paralax">
+          {/* <div className="description__paralax margin-top-m">
             <div className="description__paralax--item"></div>
-          </div>
+          </div> */}
 
           <div className="description__content description__content--2" ref={this.txt2}>
-                <img src={tablet} alt="together" className="description__content--image description__content--image--2" ref={this.img2}/>
+                <img src={workThings} alt="together" className="description__content--image description__content--image--2" ref={this.img2}/>
                 <div className='description__text description__text--2'> {/* Make a grid container */}
                     <h2 className="description__text--head">What about Greyland?</h2>
                     <p className="description__text--body">
