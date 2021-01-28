@@ -1,3 +1,4 @@
+@import './scss//abstract/animations';
 @import './scss/abstract/mixins';
 @import './scss/abstract/typography';
 @import './scss/abstract/variables';
@@ -12,6 +13,7 @@
 @import './scss/components/home/card';
 
 @import './scss/components/skills/skillsPage';
+@import './scss/components/aboutMe.scss/aboutMe';
 
 @import './scss/base.scss';
 

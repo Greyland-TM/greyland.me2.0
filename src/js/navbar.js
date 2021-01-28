@@ -13,7 +13,7 @@ const Navbar = () => (
 
             <ul className="navbar__list">
                 <li className="navbar__item"><NavLink className="navbar__link" to='/' exact>Home</NavLink></li>
-                <li className="navbar__item"><NavLink className="navbar__link" to='/skills' exact>Skills</NavLink></li>
+                <li className="navbar__item"><NavLink className="navbar__link" to='/about-me' exact>About</NavLink></li>
                 <li className="navbar__item"><NavLink className="navbar__link" to='/projects' exact>Projects</NavLink></li>
                 <li className="navbar__item"><NavLink className="navbar__link" to='/contact' exact>Contact</NavLink></li>
             </ul>
