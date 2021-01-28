@@ -3,16 +3,16 @@ import React from 'react';
 
 const Landing = () => (
     // <div className="landing">
-        <div className="about-me">
-                <div className="about-me__welcome">
-                    <div className="about-me__welcome--hi">
-                        <span className='about-me__welcome--hi-background1'></span>
-                        <span className="about-me__welcome--hi-background2"></span>
-                        <span className="about-me__welcome--hi-h">H</span>
-                        <span className="about-me__welcome--hi-i">i</span>
+        <div className="landing">
+                <div className="landing__welcome">
+                    <div className="landing__welcome--hi">
+                        <span className='landing__welcome--hi-background1'></span>
+                        <span className="landing__welcome--hi-background2"></span>
+                        <span className="landing__welcome--hi-h">H</span>
+                        <span className="landing__welcome--hi-i">i</span>
                     </div>
-                    <div className="about-me__welcome--name">
-                        <span className='about-me__welcome--name'>im Greyland</span>
+                    <div className="landing__welcome--name">
+                        <span className='landing__welcome--name'>I'm Greyland</span>
                     </div>
                 </div>
             </div>

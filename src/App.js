@@ -5,7 +5,7 @@ import Navbar from './js/navbar';
 
 import Home from './js/home/Home';
 import Skills from './js/skills-page/skills-page';
-import AboutMe from './js/aboutMe/aboutMe';
+import AboutMe from './js/skills-page/skills-page';
 import Projects from './js/projects/projects';
 import Contact from './js/contact/contact';
 

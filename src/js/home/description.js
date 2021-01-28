@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import sr from '../HOC/scroll-reveal/scrollReveal';
 
 import tablet from '../../media/tablet.jpg';
@@ -127,7 +128,7 @@ class Description extends Component {
                         And the second is building complex and automated <span>Microsoft applications</span>. Using VBA I can make managing your
                         buisness significantly easier.
                     </p>
-                    <div className="btn description__btn">Learn about Greyland &rarr;</div>
+                    <div className="btn description__btn"><Link to='/about-me'>Learn about Greyland &rarr;</Link></div>
                 </div>
           </div>
       </div>
