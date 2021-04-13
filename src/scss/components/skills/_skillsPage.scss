@@ -1,16 +1,17 @@
 .skills-page {
     display:  grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 12rem repeat(9, max-content);
+    grid-template-rows: 20rem repeat(9, max-content);
     align-items: baseline;
     justify-items: center;
+    background-color: $color-black-3;
 
     &__head {
         grid-column: 1  / -1;
         grid-row: 1 / 2;
-        align-self: end;
+        align-self: center;
         padding-bottom: 2rem;
-        font-size: $header-2;
+        font-size: $header-1;
     }
 }
 

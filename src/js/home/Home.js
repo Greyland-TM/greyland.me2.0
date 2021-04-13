@@ -1,32 +1,30 @@
-import React, {Component} from 'react';
-
+import React, { Component } from "react";
 
 // import pattern1 from '../../media/pattern1.png';
 
-import Aux from '../HOC/aux';
+import Aux from "../HOC/aux";
 
 import Landing from "./landing";
-import Skills from './skills';
-import Description from './description';
-import Projects from './projects';
-import ContactMe from './contact-me';
+import Skills from "./skills";
+import Description from "./description";
+import Projects from "./projects";
+import ContactMe from "./contact-me";
 
 class Home extends Component {
-    render() {
-        
-        return (
-            <Aux>
-                <div className='home-container'>
-                {/* <img src={pattern1} alt="" className="home__img"/> */}
-                <Landing></Landing>
-                <Skills></Skills>
-                <Description></Description>
-                <Projects></Projects>
-                <ContactMe></ContactMe>
-                </div>
-            </Aux>
-        );
-    }
+  render() {
+    return (
+      <Aux>
+        <div className="home-container">
+          {/* <img src={pattern1} alt="" className="home__img"/> */}
+          <Landing></Landing>
+          <Skills></Skills>
+          <Description></Description>
+          <Projects></Projects>
+          <ContactMe></ContactMe>
+        </div>
+      </Aux>
+    );
+  }
 }
 export default Home;
 
@@ -36,7 +34,7 @@ export default Home;
 //     constructor(props) {
 //         super(props);
 //         this.myRef = React.createRef();  }
-    
+
 // //   props: Props;
 
 //   componentDidMount = () => {

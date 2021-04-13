@@ -1,0 +1,18 @@
+.about {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 20rem);
+    padding-top: 5rem;
+    align-items: center;
+    justify-items: center;
+
+    &__head {
+        grid-column: 2 / 6;
+        font-size: $header-2;
+        color: $color-black-3;
+    }
+
+    &__body {
+
+    }
+}
